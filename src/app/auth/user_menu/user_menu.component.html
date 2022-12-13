@@ -1,0 +1,30 @@
+<button mat-button [matMenuTriggerFor]="menu">Xin chào {{ user_name }}</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <div class="flex item-container w-full" (click)="get_user_login()">
+      <div class="item-container">
+        Thông tin cá nhân
+      </div>
+    </div>
+  </button>
+  <button mat-menu-item>
+    <div class="flex item-container w-full" (click)="go_to_popup_reset_password()">
+      <div class="item-container">
+        Đổi mật khẩu
+      </div>
+    </div>
+  </button>
+  <button mat-menu-item>
+    <div class="flex item-container w-full" (click)="onLogout()">
+      <div class="item-container">
+        Logout
+      </div>
+    </div>
+  </button>
+</mat-menu>
+<style>
+  .mat-menu-panel {
+    width: 170px !important;
+    min-width: 170px !important;
+  }
+</style>
